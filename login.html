@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="./lib/layui/layui.all.js"></script>
+  <script src="./lib/layui-v2.5.6/layui/layui.all.js"></script>
+  <script src="./lib/jquery.js">  </script>
+  <script src="./js/login.js"></script>
+  <style>
+    @font-face {
+      font-family: 'iconfont';
+      src: url('./fonts/iconfont.eot');
+      src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/iconfont.woff2') format('woff2'),
+        url('./fonts/iconfont.woff') format('woff'),
+        url('./fonts/iconfont.ttf') format('truetype'),
+        url('./fonts/iconfont.svg#iconfont') format('svg');
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <img src="./images/logo.png" alt="">
+    </h1>
+
+    <p>CopyRight © 2019 深圳百秀信息技术股份有限公司<br>
+      All Rights Reserved</p>
+  </header>
+  <div class="big-box">
+    <h2></h2>
+
+
+
+    <!-- 登陆的盒子 -->
+    <div class="login-box">
+      <form class="layui-form" action="" id="login">
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-face-smile"></i>
+          <!-- 用户名 -->
+          <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
+            class="layui-input">
+        </div>
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-face-smile"></i>
+          <!-- 密码 -->
+          <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
+            class="layui-input">
+        </div>
+        <div class="layui-form-item">
+          <!-- 按钮 -->
+          <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="formDemo" id="login-btn">立即提交</button>
+        </div>
+        <div class="layui-form-item">
+          <!-- 切换按钮 -->
+          <a href="javascript:;" class="gogo">去注册</a>
+        </div>
+      </form>
+
+    </div>
+
+
+
+
+    <!-- 注册的盒子 -->
+    <div class="reg-box">
+      <form class="layui-form" action="" id="reg">
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-face-smile"></i>
+          <!-- 用户名 -->
+          <input type="text" id="uname" name="title" required lay-verify="required|username" placeholder="请输入用户名"
+            autocomplete="off" class="layui-input asd">
+        </div>
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-face-smile"></i>
+          <!-- 密码 -->
+          <input type="password" id="passw" name="title" required lay-verify="required|pass" placeholder="请输入密码"
+            autocomplete="off" class="layui-input asdasd">
+        </div>
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-face-smile"></i>
+          <!-- 确认密码 -->
+          <input type="password" id="confirm-pwd" name="title" required lay-verify="required|pass" placeholder="再次确认密码"
+            autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+          <!-- 按钮 -->
+          <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo" id="reg-btn">登录</button>
+        </div>
+        <div class="layui-form-item">
+          <!-- 切换按钮 -->
+          <a href="javascript:;" class="come">去登陆</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
