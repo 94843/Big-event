@@ -29,3 +29,48 @@
   top: 4px;
   margin-right: 10px;
 }
+.statistics {
+  display: flex;
+  justify-content: space-between;
+}
+.statistics li {
+  box-sizing: border-box;
+  width: 295px;
+  height: 98px;
+  background-color: pink;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+  /* line-height: 98px; */
+  padding-top: 15px;
+}
+.statistics .quantity {
+  font-size: 45px;
+}
+.statistics span {
+  color: darkseagreen;
+}
+.statistics li::before {
+  content: '文章总数';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  background-color: slategray;
+}
+#histogram {
+  width: 847px;
+  height: 348px;
+  float: left;
+}
+#pie {
+  width: 408px;
+  height: 348px;
+  background-color: pink;
+  float: right;
+}
+.layui-body-h {
+  margin-bottom: 15px;
+}

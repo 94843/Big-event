@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <!--顶端数据统揽 -->
+  <div class="layui-body-h">
+    <ul class="statistics">
+      <li>
+        <span class="quantity">10015</span>
+        <span>篇</span>
+        <!-- <p class="clc">文章总数</p> -->
+      </li>
+      <li>
+        <span class="quantity">123</span>
+        <span>篇</span>
+        <!-- <p class="clc">文章总数</p> -->
+      </li>
+      <li>
+        <span class="quantity">35</span>
+        <span>篇</span>
+        <!-- <p class="clc">文章总数</p> -->
+      </li>
+      <li>
+        <span class="quantity">123</span>
+        <span>篇</span>
+        <!-- <p class="clc">文章总数</p> -->
+      </li>
+    </ul>
+  </div>
+  <!-- 折线图与饼图区域 -->
+  <div>
+    <div id="histogram">
+    </div>
+    <div id="pie"></div>
+  </div>
+  <!-- 柱形图区域 -->
+  <div></div>
+  <!-- 导入 layui 的JS文件 -->
+  <script src="./lib/layui/layui.all.js"></script>
+  <!-- jq文件 -->
+  <script src="./lib/jquery.js"></script>
+  <!-- 数据可视化文件 -->
+  <script src="./lib/echarts.min.js"></script>
+  <!-- 自己的js文件 -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
