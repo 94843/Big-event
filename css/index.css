@@ -37,7 +37,7 @@
   box-sizing: border-box;
   width: 295px;
   height: 98px;
-  background-color: pink;
+  background-color: #fff;
   margin-top: 10px;
   position: relative;
   text-align: center;
@@ -68,9 +68,12 @@
 #pie {
   width: 408px;
   height: 348px;
-  background-color: pink;
   float: right;
 }
 .layui-body-h {
   margin-bottom: 15px;
+}
+.layui-body {
+  background-color: #ccc;
+  padding: 0 15px;
 }

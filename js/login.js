@@ -34,18 +34,16 @@ $(function () {
       return
     } else {
       //向接口发起请求
-      $.post(
-        'http://ajax.frontend.itheima.net/api/reguser',
-        { username: uname, password: passw },
-        function (res) {
-          console.log(res)
-          if (res.status !== 0) {
-            return layer.msg(res.message)
-          }
-          $('.come').click()
-          return layer.msg('注册成功，请登录')
+      $.post('/api/reguser', { username: uname, password: passw }, function (
+        res
+      ) {
+        console.log(res)
+        if (res.status !== 0) {
+          return layer.msg(res.message)
         }
-      )
+        $('.come').click()
+        return layer.msg('注册成功，请登录')
+      })
     }
   })
   //注册功能结束
@@ -58,12 +56,14 @@ $(function () {
     // let uname=$('#l-name').val()
     // let passw=$('#l-pass').val()
     console.log(data)
-    $.post('http://ajax.frontend.itheima.net/api/login', data, function (res) {
+    $.post('/api/login', data, function (res) {
       console.log(res)
       if (res.status !== 0) {
         return layer.msg('该用户不存在或账号密码有误')
       }
       layer.msg('登陆成功，nb！！！')
+      //保存token字符串
+      localStorage.setItem('token', res.token)
       location.href = './index.html'
     })
   })

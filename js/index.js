@@ -1,62 +1,30 @@
-var myChart = echarts.init(document.getElementById('histogram'))
-var mypie = echarts.init(document.getElementById('pie'))
+//获取用户基本信息
+$.ajax({
+  method: 'get',
+  url: '/my/userinfo',
+  headers: {
+    Authorization: localStorage.getItem('token') || '',
+  },
+  success: function (res) {
+    renderAvatar(res.data)
+  },
+})
 
-// 指定图表的配置项和数据
-var option = {
-  xAxis: {
-    type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-  },
-  yAxis: {
-    type: 'value',
-  },
-  series: [
-    {
-      data: [820, 932, 901, 934, 1290, 1330, 1320],
-      type: 'line',
-    },
-  ],
+// 渲染用户的头像
+function renderAvatar(user) {
+  // 1. 获取用户的名称
+  var name = user.nickname || user.username
+  // 2. 设置欢迎的文本
+  $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
+  // 3. 按需渲染用户的头像
+  if (user.user_pic !== null) {
+    // 3.1 渲染图片头像
+    $('.layui-nav-img').attr('src', user.user_pic).show()
+    $('.text-avatar').hide()
+  } else {
+    // 3.2 渲染文本头像
+    $('.layui-nav-img').hide()
+    var first = name[0].toUpperCase()
+    $('.text-avatar').html(first).show()
+  }
 }
-
-// 使用刚指定的配置项和数据显示图表。
-myChart.setOption(option)
-optionPie = {
-  tooltip: {
-    trigger: 'item',
-    formatter: '{a} <br/>{b}: {c} ({d}%)',
-  },
-  legend: {
-    orient: 'vertical',
-    left: 10,
-  },
-  series: [
-    {
-      name: '访问来源',
-      type: 'pie',
-      radius: ['50%', '70%'],
-      avoidLabelOverlap: false,
-      label: {
-        show: false,
-        position: 'center',
-      },
-      emphasis: {
-        label: {
-          show: true,
-          fontSize: '30',
-          fontWeight: 'bold',
-        },
-      },
-      labelLine: {
-        show: false,
-      },
-      data: [
-        { value: 335 },
-        { value: 310 },
-        { value: 234 },
-        { value: 135 },
-        { value: 1548 },
-      ],
-    },
-  ],
-}
-mypie.setOption(optionPie)
