@@ -2,38 +2,37 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f2f3f5;
 }
 
 body {
   padding: 15px;
+  background-color: #f2f3f5;
 }
-
-.cropper-box {
-  width: 400px;
-  height: 280px;
-}
-
-#image {
-  max-width: 400px; /* This rule is very important, please do not ignore this! */
-  max-height: 280px;
-}
-
-.img-preview {
-  width: 200px;
-  height: 140px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.cropper-container {
+/* 封面容器的样式 */
+.cover-box {
   display: flex;
 }
 
-.cropper-box {
-  margin-right: 15px;
+/* 左侧裁剪区域的样式 */
+.cover-left {
+  width: 400px;
+  height: 280px;
+  overflow: hidden;
+  margin-right: 20px;
 }
 
-.right-box {
-  text-align: center;
+/* 右侧盒子的样式 */
+.cover-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 预览区域的样式 */
+.img-preview {
+  width: 200px;
+  height: 140px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+  overflow: hidden;
 }

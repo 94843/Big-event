@@ -8,8 +8,10 @@ function getUserInfo() {
     },
     success: function (res) {
       if (res.status !== 0) {
-        return layui.layer.msg(res.message)
+        layui.layer.msg(res.message)
+        return
       }
+      //渲染头像
       renderAvatar(res.data)
     },
   })
