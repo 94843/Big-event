@@ -36,7 +36,7 @@ $(function () {
           layer.msg(res.message)
         }
         loadArt()
-        layer.closeAll()
+        // layer.closeAll()
       },
     })
   })

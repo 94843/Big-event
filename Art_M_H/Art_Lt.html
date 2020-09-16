@@ -61,13 +61,13 @@
 
       <!-- 分页区域 -->
       <div id="page-box"></div>
-
-      <!-- <script type="text/html" id="tpl-table">
+      <!-- 模板引擎 -->
+      <script type="text/html" id="tpl-table">
         {{each data}}
         <tr>
           <td>{{$value.title}}</td>
           <td>{{$value.cate_name}}</td>
-          <td>{{$value.pub_date|dataFormat}}</td>
+          <td>{{$value.pub_date}}</td>
           <td>{{$value.state}}</td>
           <td>
             <button type="button" class="layui-btn layui-btn-xs">编辑</button>
@@ -75,14 +75,16 @@
           </td>
         </tr>
         {{/each}}
-      </script> -->
+      </script>
       <!-- 导入第三方的 JS 插件 -->
+
       <script src="../lib/layui/layui.all.js"></script>
       <script src="../lib/jquery.js"></script>
       <script src="../js/baseAPI.js"></script>
       <script src="../lib/template-web.js"></script>
       <!-- 导入自己的 JS 脚本 -->
       <script src="../js/ArticleManagementJS/Art_Lt.js"></script>
+
 </body>
 
 </html>
